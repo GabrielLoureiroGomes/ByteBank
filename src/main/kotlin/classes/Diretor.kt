@@ -1,3 +1,7 @@
+package classes
+
+import interfaces.Autenticavel
+
 class Diretor(
     nome: String,
     cpf: String,
@@ -9,6 +13,6 @@ class Diretor(
     cpf,
     salario,
     senha
-) {
+), Autenticavel {
     override val bonificacao: Double get() = salario + plr
 }

@@ -1,3 +1,8 @@
+package files
+
+import classes.ContaCorrente
+import classes.ContaPoupanca
+
 fun testaContasDiferentes() {
     val contaCorrente = ContaCorrente(
         titular = "Alex",

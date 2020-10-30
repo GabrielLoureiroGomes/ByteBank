@@ -1,3 +1,8 @@
+package files
+
+import classes.ContaCorrente
+import classes.ContaPoupanca
+
 fun testaComportamentosConta() {
     val contaGabriel = ContaCorrente("Gabriel", 1000)
     contaGabriel.depositar(200.0)

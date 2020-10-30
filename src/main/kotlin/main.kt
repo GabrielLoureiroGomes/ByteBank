@@ -1,4 +1,6 @@
+import files.testaAutenticacao
+
 fun main() {
-    testaFuncionarios()
+    testaAutenticacao()
 }
 

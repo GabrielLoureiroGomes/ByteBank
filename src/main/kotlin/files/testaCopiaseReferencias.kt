@@ -1,3 +1,8 @@
+package files
+
+import classes.ContaCorrente
+import classes.ContaPoupanca
+
 fun testaCopiasEReferencias() {
     val numeroX = 10
     var numeroY = numeroX

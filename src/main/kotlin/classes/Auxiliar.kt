@@ -1,3 +1,5 @@
+package classes
+
 class Auxiliar(
     nome: String,
     cpf: String,

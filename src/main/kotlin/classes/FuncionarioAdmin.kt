@@ -1,3 +1,7 @@
+package classes
+
+import interfaces.Autenticavel
+
 abstract class FuncionarioAdmin(
     nome: String,
     cpf: String,

@@ -1,3 +1,10 @@
+package files
+
+import classes.Analista
+import classes.CalculadoraBonificacao
+import classes.Diretor
+import classes.Gerente
+
 fun testaFuncionarios() {
     val gabriel = Analista(
         nome = "Gabriel",
