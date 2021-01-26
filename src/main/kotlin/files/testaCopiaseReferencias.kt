@@ -1,5 +1,6 @@
 package files
 
+import classes.Cliente
 import classes.ContaCorrente
 import classes.ContaPoupanca
 
@@ -11,11 +12,13 @@ fun testaCopiasEReferencias() {
     println("numeroX $numeroX")
     println("numeroY $numeroY")
 
-    val contaGabriel = ContaCorrente("Gabriel", 1002)
-    contaGabriel.titular = "Gabriel"
-    var contaJessica = ContaPoupanca("Jessica", 1003)
-    contaJessica.titular = "Jessica"
-    contaGabriel.titular = "Gabriel"
+    val gabriel = Cliente("Gabriel", "123", 123)
+    val contaGabriel = ContaCorrente(gabriel, 1002)
+    contaGabriel.titular = gabriel
+    val jessica = Cliente("Jessica", "789", 789)
+    val contaJessica = ContaPoupanca(jessica, 1003)
+    contaJessica.titular = jessica
+    contaGabriel.titular = gabriel
 
     println("Titular conta Gabriel: ${contaGabriel.titular}")
     println("Titular conta Jessica: ${contaJessica.titular}")

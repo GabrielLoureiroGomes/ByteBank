@@ -1,13 +1,17 @@
 package files
 
+import classes.Cliente
 import classes.ContaCorrente
 import classes.ContaPoupanca
 
 fun testaComportamentosConta() {
-    val contaGabriel = ContaCorrente("Gabriel", 1000)
+
+    val gabriel = Cliente("Gabriel", "123456789", 123)
+    val contaGabriel = ContaCorrente(gabriel, 1000)
     contaGabriel.depositar(200.0)
 
-    val contaJessica = ContaPoupanca(numeroConta = 1001, titular = "Jessica")
+    val jessica = Cliente("Jessica", "987654321", 456)
+    val contaJessica = ContaPoupanca(numeroConta = 1001, titular = jessica)
     contaJessica.depositar(300.0)
 
     println(contaJessica.titular)

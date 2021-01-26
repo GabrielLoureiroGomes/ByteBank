@@ -1,6 +1,11 @@
-import files.testaAutenticacao
+import files.*
 
-fun main() {
+fun main(){
+    testaComportamentosConta()
+    testaContasDiferentes()
     testaAutenticacao()
+    testaCopiasEReferencias()
+    testaCondicoes(50.0)
+    testaFuncionarios()
+    testaLacos()
 }
-

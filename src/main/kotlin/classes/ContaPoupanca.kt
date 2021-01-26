@@ -3,7 +3,7 @@ package classes
 import classes.Conta
 
 class ContaPoupanca(
-    titular: String,
+    titular: Cliente,
     numeroConta: Int
 ) : Conta(
     titular,

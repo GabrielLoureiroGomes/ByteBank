@@ -1,15 +1,20 @@
 package files
 
+import classes.Cliente
 import classes.ContaCorrente
 import classes.ContaPoupanca
+import classes.Endereco
 
 fun testaContasDiferentes() {
+    val alex = Cliente("Alex", "987", 987, endereco = Endereco("Rua Uga Buga", 49,
+        "Itu", "São Paulo", "SP", "01000000", "Casa 13"))
     val contaCorrente = ContaCorrente(
-        titular = "Alex",
+        titular = alex,
         numeroConta = 1000
     )
+    val fran = Cliente("Fran", "123", 78)
     val contaPoupanca = ContaPoupanca(
-        titular = "Fran",
+        titular = fran,
         numeroConta = 1001
     )
 

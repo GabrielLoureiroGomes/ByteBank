@@ -14,10 +14,10 @@ fun testaLacos() {
         i++
     }
 
-    for (i in 5 downTo 1) {
-        val titular: String = "Gabriel $i"
-        val numeroConta: Int = 1000 + i
-        var saldo = i + 10.0
+    for (u in 5 downTo 1) {
+        val titular: String = "Gabriel $u"
+        val numeroConta: Int = 1000 + u
+        var saldo = u + 10.0
 
         println("Titular $titular")
         println("Número da conta $numeroConta")
