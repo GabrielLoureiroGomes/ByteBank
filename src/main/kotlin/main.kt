@@ -1,11 +1,14 @@
-import files.*
+import classes.Cliente
+import classes.ContaCorrente
+import classes.ContaPoupanca
+import classes.totalContas
+import files.testaContasDiferentes
 
-fun main(){
-    testaComportamentosConta()
+fun main() {
+
+    val gabriel = Cliente("Gabriel", "", 1)
+    val contaPoupanca = ContaPoupanca(gabriel, 1000)
+    val contaCorrente = ContaCorrente(gabriel, 1001)
     testaContasDiferentes()
-    testaAutenticacao()
-    testaCopiasEReferencias()
-    testaCondicoes(50.0)
-    testaFuncionarios()
-    testaLacos()
+    println("Total de contas: $totalContas")
 }

@@ -1,11 +1,19 @@
 package classes
 
+var totalContas = 0
+    private set
+
 abstract class Conta(
     var titular: Cliente,
     val numeroConta: Int
 ) {
     var saldo = 0.0
         protected set
+
+    init {
+        println("Criando conta!")
+        totalContas++
+    }
 
     fun depositar(valor: Double) {
         if (valor > 0) {
