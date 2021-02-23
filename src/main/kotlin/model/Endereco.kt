@@ -1,4 +1,4 @@
-package classes
+package model
 
 class Endereco(
     var logradouro: String = "",

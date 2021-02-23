@@ -1,8 +1,10 @@
 package files
 
-import classes.Cliente
-import classes.ContaCorrente
-import classes.ContaPoupanca
+import exceptions.AutenticacaoException
+import exceptions.SaldoInsuficienteException
+import model.Cliente
+import model.ContaCorrente
+import model.ContaPoupanca
 
 fun testaComportamentosConta() {
 
@@ -48,10 +50,15 @@ fun testaComportamentosConta() {
 
     println("Transferência da conta da Jessica para o Gabriel")
 
-    if (contaJessica.transferir(contaGabriel, 300.0)) {
+    try {
+        contaJessica.transferir(contaGabriel, 250.0, 456)
         println("Transferência feita com sucesso!")
-    } else {
+    } catch (e: SaldoInsuficienteException) {
         println("Falha na transferência")
+        e.printStackTrace()
+    } catch (e: AutenticacaoException) {
+        println("Falha na autenticação!")
+        e.printStackTrace()
     }
 
     println(contaGabriel.saldo)

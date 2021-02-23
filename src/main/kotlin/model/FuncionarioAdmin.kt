@@ -1,6 +1,4 @@
-package classes
-
-import interfaces.Autenticavel
+package model
 
 abstract class FuncionarioAdmin(
     nome: String,

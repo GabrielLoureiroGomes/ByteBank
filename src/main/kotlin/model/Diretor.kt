@@ -1,6 +1,4 @@
-package classes
-
-import interfaces.Autenticavel
+package model
 
 class Diretor(
     nome: String,

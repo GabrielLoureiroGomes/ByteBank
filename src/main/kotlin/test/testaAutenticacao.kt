@@ -1,9 +1,9 @@
 package files
 
-import classes.Cliente
-import classes.Diretor
-import classes.Gerente
-import classes.SistemaInterno
+import model.Cliente
+import model.Diretor
+import model.Gerente
+import model.SistemaInterno
 
 fun testaAutenticacao() {
     val gerente = Gerente(

@@ -1,9 +1,9 @@
 package files
 
-import classes.Analista
-import classes.CalculadoraBonificacao
-import classes.Diretor
-import classes.Gerente
+import model.Analista
+import model.CalculadoraBonificacao
+import model.Diretor
+import model.Gerente
 
 fun testaFuncionarios() {
     val gabriel = Analista(

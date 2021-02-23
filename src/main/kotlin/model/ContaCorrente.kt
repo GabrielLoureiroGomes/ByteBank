@@ -1,6 +1,4 @@
-package classes
-
-import classes.Conta
+package model
 
 class ContaCorrente(
     titular: Cliente,

@@ -1,8 +1,8 @@
 package files
 
-import classes.Cliente
-import classes.ContaCorrente
-import classes.ContaPoupanca
+import model.Cliente
+import model.ContaCorrente
+import model.ContaPoupanca
 
 fun testaCopiasEReferencias() {
     val numeroX = 10

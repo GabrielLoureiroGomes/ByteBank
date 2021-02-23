@@ -1,9 +1,9 @@
 package files
 
-import classes.Cliente
-import classes.ContaCorrente
-import classes.ContaPoupanca
-import classes.Endereco
+import model.Cliente
+import model.ContaCorrente
+import model.ContaPoupanca
+import model.Endereco
 
 fun testaContasDiferentes() {
     val alex = Cliente("Alex", "987", 987, endereco = Endereco("Rua Uga Buga", 49,
@@ -30,12 +30,12 @@ fun testaContasDiferentes() {
     println("saldo após saque corrente: ${contaCorrente.saldo}")
     println("saldo após saque poupança: ${contaPoupanca.saldo}")
 
-    contaCorrente.transferir(contaPoupanca, 100.0)
+    contaCorrente.transferir(contaPoupanca, 100.0, 987)
 
     println("saldo corrente após tranferir para poupança: ${contaCorrente.saldo}")
     println("saldo poupança após receber transferência: ${contaPoupanca.saldo}")
 
-    contaPoupanca.transferir(contaCorrente, 100.0)
+    contaPoupanca.transferir(contaCorrente, 100.0, 78)
 
     println("saldo poupança após tranferir para corrente: ${contaPoupanca.saldo}")
     println("saldo corrente após receber transferência: ${contaCorrente.saldo}")

@@ -1,4 +1,4 @@
-package classes
+package model
 
 abstract class Funcionario(
     val nome: String,

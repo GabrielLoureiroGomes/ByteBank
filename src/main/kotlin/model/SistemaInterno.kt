@@ -1,6 +1,6 @@
-package classes
+package model
 
-import interfaces.Autenticavel
+import model.Autenticavel
 
 class SistemaInterno {
 

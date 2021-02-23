@@ -1,4 +1,4 @@
-package classes
+package model
 
 class Analista(
     nome: String,
