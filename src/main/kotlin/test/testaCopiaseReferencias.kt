@@ -1,4 +1,4 @@
-package files
+package test
 
 import model.Cliente
 import model.ContaCorrente
@@ -12,16 +12,22 @@ fun testaCopiasEReferencias() {
     println("numeroX $numeroX")
     println("numeroY $numeroY")
 
-    val gabriel = Cliente("Gabriel", "123", 123)
-    val contaGabriel = ContaCorrente(gabriel, 1002)
-    contaGabriel.titular = gabriel
-    val jessica = Cliente("Jessica", "789", 789)
-    val contaJessica = ContaPoupanca(jessica, 1003)
-    contaJessica.titular = jessica
-    contaGabriel.titular = gabriel
+    val gabriel = Cliente(nome = "Gabriel", cpf = "", senha = 1)
 
-    println("Titular conta Gabriel: ${contaGabriel.titular}")
-    println("Titular conta Jessica: ${contaJessica.titular}")
+    val contaGabriel = ContaCorrente(gabriel, 1002)
+    contaGabriel.titular.nome = "Gabriel"
+    val contaJessica = ContaPoupanca(
+        Cliente(
+            nome = "Jessica",
+            cpf = "",
+            senha = 2
+        ), 1003
+    )
+    contaJessica.titular.nome = "Jessica"
+    contaGabriel.titular.nome = "Gabriel"
+
+    println("titular conta Gabriel: ${contaGabriel.titular}")
+    println("titular conta Jessica: ${contaJessica.titular}")
 
     println(contaGabriel)
     println(contaJessica)
